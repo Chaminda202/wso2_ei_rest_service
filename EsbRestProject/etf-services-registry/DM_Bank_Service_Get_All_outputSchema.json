@@ -1,0 +1,54 @@
+{
+  "id" : "http://wso2jsonschema.org",
+  "title" : "jsonObject",
+  "$schema" : "http://wso2.org/json-schema/wso2-data-mapper-v5.0.0/schema#",
+  "properties" : {
+    "MESSAGE" : {
+      "id" : "http://wso2jsonschema.org/MESSAGE",
+      "type" : "string"
+    },
+    "STATUS" : {
+      "id" : "http://wso2jsonschema.org/STATUS",
+      "type" : "string"
+    },
+    "DATA" : {
+      "id" : "http://wso2jsonschema.org/DATA",
+      "type" : "array",
+      "items" : [ {
+        "id" : "http://wso2jsonschema.org/DATA/0",
+        "type" : "object",
+        "properties" : {
+          "bank_id" : {
+            "id" : "http://wso2jsonschema.org/DATA/0/bank_id",
+            "type" : "number"
+          },
+          "name_eng" : {
+            "id" : "http://wso2jsonschema.org/DATA/0/name_eng",
+            "type" : "string"
+          },
+          "name_sin" : {
+            "id" : "http://wso2jsonschema.org/DATA/0/name_sin",
+            "type" : "string"
+          },
+          "name_tam" : {
+            "id" : "http://wso2jsonschema.org/DATA/0/name_tam",
+            "type" : "string"
+          },
+          "active" : {
+            "id" : "http://wso2jsonschema.org/DATA/0/active",
+            "type" : "boolean"
+          },
+          "create_by" : {
+            "id" : "http://wso2jsonschema.org/DATA/0/create_by",
+            "type" : "number"
+          },
+          "swift_code" : {
+            "id" : "http://wso2jsonschema.org/DATA/0/swift_code",
+            "type" : "string"
+          }
+        }
+      } ]
+    }
+  },
+  "type" : "object"
+}

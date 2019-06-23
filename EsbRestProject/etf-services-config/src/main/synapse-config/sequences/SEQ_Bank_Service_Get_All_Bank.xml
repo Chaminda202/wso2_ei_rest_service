@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sequence name="SEQ_Bank_Service_Get_All_Bank" trace="disable" xmlns="http://ws.apache.org/ns/synapse">
+    <property description="endpoints configurations loaded from endpointConfig.xml" expression="get-property('registry','conf:/custom/endpointConfig.xml')" name="prop_endpoints" scope="default" type="OM"/>
+    <property expression="$ctx:prop_endpoints/context" name="prop_context" scope="default" type="STRING"/>
+    <property expression="$ctx:prop_endpoints/bank/get_all" name="prop_get_all_bank" scope="default" type="STRING"/>
+    <property expression="fn:concat($ctx:prop_context, $ctx:prop_get_all_bank)" name="service_url" scope="default" type="STRING"/>
+    <log description="log_channel" level="custom">
+        <property expression="$ctx:prop_context" name="log_context"/>
+        <property expression="$ctx:prop_get_all_bank" name="log_get_all_bank"/>
+        <property expression="$ctx:service_url" name="log_url"/>
+    </log>
+    <header expression="get-property('service_url')" name="To" scope="default"/>
+    <call description="call the get all banks endpoint">
+        <endpoint>
+            <default format="rest"/>
+        </endpoint>
+    </call>
+</sequence>

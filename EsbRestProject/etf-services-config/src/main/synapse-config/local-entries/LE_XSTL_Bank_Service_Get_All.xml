@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<localEntry key="LE_XSTL_Bank_Service_Get_All" xmlns="http://ws.apache.org/ns/synapse">
+    <xsl:stylesheet version="1.0" xmlns:ns1="http://sample.dineshjweerakkody.com/xslt/xpath" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+        <xsl:template match="/">
+            <response>
+                <xsl:for-each select="//jsonObject/DATA">
+                    <data>
+                        <bank_id>
+                            <xsl:value-of select="bank_id"/>
+                        </bank_id>
+                        <name_eng>
+                            <xsl:value-of select="name_eng"/>
+                        </name_eng>
+                        <active>
+                            <xsl:value-of select="active"/>
+                        </active>
+                        <swift_code>
+                            <xsl:value-of select="swift_code"/>
+                        </swift_code>
+                    </data>
+                </xsl:for-each>
+            </response>
+        </xsl:template>
+    </xsl:stylesheet>
+</localEntry>

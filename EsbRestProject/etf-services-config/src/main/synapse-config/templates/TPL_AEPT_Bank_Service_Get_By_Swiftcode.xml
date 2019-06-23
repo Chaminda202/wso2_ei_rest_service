@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<template name="TPL_AEPT_Bank_Service_Get_By_Swiftcode" xmlns="http://ws.apache.org/ns/synapse">
+    <endpoint name="$name">
+        <address uri="$uri"/>
+    </endpoint>
+</template>

@@ -1,0 +1,28 @@
+map_S_root_S_jsonObject = function(){ 
+var outputjsonObject={};
+
+var count_i_DATA = 0;
+outputjsonObject =  {};
+outputjsonObject.MESSAGE = inputroot.MESSAGE;
+outputjsonObject.STATUS = inputroot.STATUS.toString().toLowerCase();
+outputjsonObject.DATA =  [];
+
+for(i_DATA in inputroot.DATA){
+outputjsonObject.DATA[count_i_DATA] =  {};
+outputjsonObject.DATA[count_i_DATA].bank_id = inputroot.DATA[i_DATA].bank_id;
+outputjsonObject.DATA[count_i_DATA].name_eng = inputroot.DATA[i_DATA].name_eng;
+outputjsonObject.DATA[count_i_DATA].active = inputroot.DATA[i_DATA].active;
+outputjsonObject.DATA[count_i_DATA].swift_code = inputroot.DATA[i_DATA].swift_code;
+
+count_i_DATA++;
+}
+return outputjsonObject;
+};
+
+
+
+
+
+
+
+

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sequence name="SEQ_Bank_Service_Delete_Bank" trace="disable" xmlns="http://ws.apache.org/ns/synapse">
+    <property description="endpoints configurations loaded from endpointConfig.xml" expression="get-property('registry','conf:/custom/endpointConfig.xml')" name="prop_endpoints" scope="default" type="OM"/>
+    <property description="messages loaded from message.xml" expression="get-property('registry','conf:/custom/message.xml')" name="prop_messages" scope="default" type="OM"/>
+    <property expression="$ctx:prop_endpoints/context" name="prop_context" scope="default" type="STRING"/>
+    <property expression="$ctx:prop_endpoints/bank/delete" name="prop_delete_bank" scope="default" type="STRING"/>
+    <property expression="fn:concat($ctx:prop_context, $ctx:prop_delete_bank)" name="uri.var.service.url" scope="default" type="STRING"/>
+    <log description="log_channel" level="custom">
+        <property expression="$ctx:uri.var.service.url" name="log_url"/>
+        <property expression="$ctx:prop_context" name="log_context"/>
+    </log>
+    <call description="call delete bank endpoint">
+        <endpoint key="EPT_Bank_Service_Delete_By_Id"/>
+    </call>
+    <property expression="json-eval($.STATUS)" name="apiStatus" scope="default" type="STRING"/>
+    <filter regex="FAILED" source="get-property('apiStatus')">
+        <then>
+            <payloadFactory description="fail_response" media-type="json">
+                <format>{"MESSAGE":"$1","STATUS":"$2","GENERIC_RESP":"$3"}</format>
+                <args>
+                    <arg evaluator="json" expression="$.MESSAGE"/>
+                    <arg evaluator="json" expression="$.STATUS"/>
+                    <arg evaluator="xml" expression="$ctx:prop_messages/generic"/>
+                </args>
+            </payloadFactory>
+        </then>
+        <else/>
+    </filter>
+</sequence>

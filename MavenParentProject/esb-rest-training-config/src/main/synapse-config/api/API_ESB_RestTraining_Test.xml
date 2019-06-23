@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<api context="/esb/rest/example" name="API_ESB_RestTraining_Test" xmlns="http://ws.apache.org/ns/synapse">
+    <resource methods="POST">
+        <inSequence>
+            <log description="Request_Log" level="full"/>
+            <property description="prop_request" name="transportNonBlocking" scope="default" type="STRING" value="value"/>
+            <sequence key="SEQ_HeaderProperties"/>
+            <loopback/>
+        </inSequence>
+        <outSequence>
+            <log description="Response_log">
+                <property name="prop_test" value="Before Response"/>
+            </log>
+            <respond/>
+        </outSequence>
+        <faultSequence/>
+    </resource>
+</api>

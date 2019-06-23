@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?><artifacts>
+    <artifact name="API_ESB_RestTraining_Test" groupId="com.example.esb-rest-training-config.api" version="1.0.0" type="synapse/api" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/api/API_ESB_RestTraining_Test.xml</file>
+    </artifact>
+    <artifact name="API_rest_sample_service" groupId="com.example.esb-rest-training-config.api" version="1.0.0" type="synapse/api" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/api/API_rest_sample_service.xml</file>
+    </artifact>
+    <artifact name="SEQ_HeaderProperties" groupId="com.example.esb-rest-training-config.sequence" version="1.0.0" type="synapse/sequence" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/sequences/SEQ_HeaderProperties.xml</file>
+    </artifact>
+</artifacts>

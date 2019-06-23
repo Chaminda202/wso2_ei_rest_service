@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?><artifacts>
+    <artifact name="API_Etf_Bank_Services" groupId="com.rest.etf-services-config.api" version="1.0.0" type="synapse/api" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/api/API_Etf_Bank_Services.xml</file>
+    </artifact>
+    <artifact name="EPT_Bank_Service_Get_All_Bank" groupId="com.rest.etf-services-config.endpoint" version="1.0.0" type="synapse/endpoint" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/endpoints/EPT_Bank_Service_Get_All_Bank.xml</file>
+    </artifact>
+    <artifact name="SEQ_Bank_Service_Get_All_Bank" groupId="com.rest.etf-services-config.sequence" version="1.0.0" type="synapse/sequence" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/sequences/SEQ_Bank_Service_Get_All_Bank.xml</file>
+    </artifact>
+    <artifact name="SEQ_Bank_Service_Get_Bank_Byid" groupId="com.rest.etf-services-config.sequence" version="1.0.0" type="synapse/sequence" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/sequences/SEQ_Bank_Service_Get_Bank_Byid.xml</file>
+    </artifact>
+    <artifact name="SEQ_Bank_Service_Get_Bank_BySwiftCode" groupId="com.rest.etf-services-config.sequence" version="1.0.0" type="synapse/sequence" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/sequences/SEQ_Bank_Service_Get_Bank_BySwiftCode.xml</file>
+    </artifact>
+    <artifact name="EPT_Bank_Service_Get_By_Swiftcode" groupId="com.rest.etf-services-config.endpoint" version="1.0.0" type="synapse/endpoint" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/endpoints/EPT_Bank_Service_Get_By_Swiftcode.xml</file>
+    </artifact>
+    <artifact name="TPL_AEPT_Bank_Service_Get_By_Swiftcode" groupId="com.rest.etf-services-config.template" version="1.0.0" type="synapse/endpointTemplate" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/templates/TPL_AEPT_Bank_Service_Get_By_Swiftcode.xml</file>
+    </artifact>
+    <artifact name="SEQ_Bank_Service_Endpoint_Template_Get_Bank_BySwiftCode" groupId="com.rest.etf-services-config.sequence" version="1.0.0" type="synapse/sequence" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/sequences/SEQ_Bank_Service_Endpoint_Template_Get_Bank_BySwiftCode.xml</file>
+    </artifact>
+    <artifact name="EPT_Bank_Service_Create_Bank" groupId="com.rest.etf-services-config.endpoint" version="1.0.0" type="synapse/endpoint" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/endpoints/EPT_Bank_Service_Create_Bank.xml</file>
+    </artifact>
+    <artifact name="SEQ_Bank_Service_Create_Bank" groupId="com.rest.etf-services-config.sequence" version="1.0.0" type="synapse/sequence" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/sequences/SEQ_Bank_Service_Create_Bank.xml</file>
+    </artifact>
+    <artifact name="EPT_Bank_Service_Update_Bank" groupId="com.rest.etf-services-config.endpoint" version="1.0.0" type="synapse/endpoint" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/endpoints/EPT_Bank_Service_Update_Bank.xml</file>
+    </artifact>
+    <artifact name="SEQ_Bank_Service_Update_Bank" groupId="com.rest.etf-services-config.sequence" version="1.0.0" type="synapse/sequence" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/sequences/SEQ_Bank_Service_Update_Bank.xml</file>
+    </artifact>
+    <artifact name="EPT_Bank_Service_Delete_By_Id" groupId="com.rest.etf-services-config.endpoint" version="1.0.0" type="synapse/endpoint" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/endpoints/EPT_Bank_Service_Delete_By_Id.xml</file>
+    </artifact>
+    <artifact name="SEQ_Bank_Service_Delete_Bank" groupId="com.rest.etf-services-config.sequence" version="1.0.0" type="synapse/sequence" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/sequences/SEQ_Bank_Service_Delete_Bank.xml</file>
+    </artifact>
+    <artifact name="SEQ_Bank_Service_Data_Mapper_Get_All_Bank" groupId="com.rest.etf-services-config.sequence" version="1.0.0" type="synapse/sequence" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/sequences/SEQ_Bank_Service_Data_Mapper_Get_All_Bank.xml</file>
+    </artifact>
+    <artifact name="EPT_Bank_Service_Get_All" groupId="com.rest.etf-services-config.endpoint" version="1.0.0" type="synapse/endpoint" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/endpoints/EPT_Bank_Service_Get_All.xml</file>
+    </artifact>
+    <artifact name="LE_XSTL_Bank_Service_Get_All" groupId="com.rest.etf-services-config.local-entry" version="1.0.0" type="synapse/local-entry" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/local-entries/LE_XSTL_Bank_Service_Get_All.xml</file>
+    </artifact>
+    <artifact name="SEQ_Bank_Service_XSLT_Get_All_Bank" groupId="com.rest.etf-services-config.sequence" version="1.0.0" type="synapse/sequence" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/sequences/SEQ_Bank_Service_XSLT_Get_All_Bank.xml</file>
+    </artifact>
+</artifacts>

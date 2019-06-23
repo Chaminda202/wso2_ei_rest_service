@@ -1,0 +1,6 @@
+<error>
+	<message>
+		<success>Api call is success</success>
+		<fail>Api call is success</fail>
+	</message>
+</error>

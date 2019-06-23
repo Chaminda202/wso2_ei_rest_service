@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<api context="/rest/sample" name="API_rest_sample_service_001" port="8380" xmlns="http://ws.apache.org/ns/synapse">
+    <resource methods="GET">
+        <inSequence/>
+        <outSequence/>
+        <faultSequence/>
+    </resource>
+</api>

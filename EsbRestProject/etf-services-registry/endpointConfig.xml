@@ -1,0 +1,11 @@
+<endpoint>
+	<context>http://localhost:8580</context>
+	<bank>
+		<get_all>/api/banks</get_all>
+		<get_by_id>/api/banks</get_by_id>
+		<get_by_swiftcode>/api/banks/swiftcode</get_by_swiftcode>
+		<create>/api/banks</create>
+		<update>/api/banks</update>
+		<delete>/api/banks</delete>
+	</bank>
+</endpoint>

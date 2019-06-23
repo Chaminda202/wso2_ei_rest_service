@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<datamapper:DataMapperRoot xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:datamapper="http:///org/wso2/developerstudio/eclipse/gmf/datamapper">
+  <input>
+    <treeNode name="root" schemaDataType="OBJECT" level="1">
+      <node name="MESSAGE" schemaDataType="STRING" level="2">
+        <properties key="type" value="string"/>
+        <properties key="id" value="http://wso2jsonschema.org/MESSAGE"/>
+        <properties key="nullable" value="false"/>
+        <outNode>
+          <outgoingLink inNode="//@output/@treeNode.0/@node.0/@inNode"/>
+        </outNode>
+        <inNode/>
+      </node>
+      <node name="STATUS" schemaDataType="STRING" level="2">
+        <properties key="type" value="string"/>
+        <properties key="id" value="http://wso2jsonschema.org/STATUS"/>
+        <properties key="nullable" value="false"/>
+        <outNode>
+          <outgoingLink inNode="//@operators.0/@basicContainer/@leftContainer/@leftConnectors.0/@inNode"/>
+        </outNode>
+        <inNode/>
+      </node>
+      <node name="DATA" level="2">
+        <node name="bank_id" schemaDataType="NUMBER" level="3">
+          <properties key="type" value="number"/>
+          <properties key="id" value="http://wso2jsonschema.org/DATA/0/bank_id"/>
+          <properties key="nullable" value="false"/>
+          <outNode>
+            <outgoingLink inNode="//@output/@treeNode.0/@node.2/@node.0/@inNode"/>
+          </outNode>
+          <inNode/>
+        </node>
+        <node name="name_eng" schemaDataType="STRING" level="3">
+          <properties key="type" value="string"/>
+          <properties key="id" value="http://wso2jsonschema.org/DATA/0/name_eng"/>
+          <properties key="nullable" value="false"/>
+          <outNode>
+            <outgoingLink inNode="//@output/@treeNode.0/@node.2/@node.1/@inNode"/>
+          </outNode>
+          <inNode/>
+        </node>
+        <node name="name_sin" schemaDataType="STRING" level="3">
+          <properties key="type" value="string"/>
+          <properties key="id" value="http://wso2jsonschema.org/DATA/0/name_sin"/>
+          <properties key="nullable" value="false"/>
+          <outNode/>
+          <inNode/>
+        </node>
+        <node name="name_tam" schemaDataType="STRING" level="3">
+          <properties key="type" value="string"/>
+          <properties key="id" value="http://wso2jsonschema.org/DATA/0/name_tam"/>
+          <properties key="nullable" value="false"/>
+          <outNode/>
+          <inNode/>
+        </node>
+        <node name="active" schemaDataType="BOOLEAN" level="3">
+          <properties key="type" value="boolean"/>
+          <properties key="id" value="http://wso2jsonschema.org/DATA/0/active"/>
+          <properties key="nullable" value="false"/>
+          <outNode>
+            <outgoingLink inNode="//@output/@treeNode.0/@node.2/@node.4/@inNode"/>
+          </outNode>
+          <inNode/>
+        </node>
+        <node name="create_by" schemaDataType="NUMBER" level="3">
+          <properties key="type" value="number"/>
+          <properties key="id" value="http://wso2jsonschema.org/DATA/0/create_by"/>
+          <properties key="nullable" value="false"/>
+          <outNode/>
+          <inNode/>
+        </node>
+        <node name="swift_code" schemaDataType="STRING" level="3">
+          <properties key="type" value="string"/>
+          <properties key="id" value="http://wso2jsonschema.org/DATA/0/swift_code"/>
+          <properties key="nullable" value="false"/>
+          <outNode>
+            <outgoingLink inNode="//@output/@treeNode.0/@node.2/@node.6/@inNode"/>
+          </outNode>
+          <inNode/>
+        </node>
+        <properties key="type" value="array"/>
+        <properties key="id" value="http://wso2jsonschema.org/DATA"/>
+        <properties key="items_id" value="http://wso2jsonschema.org/DATA/0"/>
+        <properties key="items_type" value="object"/>
+        <properties key="nullable" value="false"/>
+        <properties key="properties_id" value="{bank_id={id=http://wso2jsonschema.org/DATA/0/bank_id, type=number}, name_eng={id=http://wso2jsonschema.org/DATA/0/name_eng, type=string}, name_sin={id=http://wso2jsonschema.org/DATA/0/name_sin, type=string}, name_tam={id=http://wso2jsonschema.org/DATA/0/name_tam, type=string}, active={id=http://wso2jsonschema.org/DATA/0/active, type=boolean}, create_by={id=http://wso2jsonschema.org/DATA/0/create_by, type=number}, swift_code={id=http://wso2jsonschema.org/DATA/0/swift_code, type=string}}"/>
+        <outNode/>
+        <inNode/>
+      </node>
+      <properties key="type" value="object"/>
+      <properties key="$schema" value="http://wso2.org/json-schema/wso2-data-mapper-v5.0.0/schema#"/>
+      <properties key="id" value="http://wso2jsonschema.org"/>
+      <properties key="nullable" value="false"/>
+      <outNode/>
+      <inNode/>
+    </treeNode>
+  </input>
+  <output>
+    <treeNode name="jsonObject" schemaDataType="OBJECT" level="1">
+      <node name="MESSAGE" schemaDataType="STRING" level="2">
+        <properties key="type" value="string"/>
+        <properties key="id" value="http://wso2jsonschema.org/MESSAGE"/>
+        <properties key="nullable" value="false"/>
+        <outNode/>
+        <inNode incomingLink="//@input/@treeNode.0/@node.0/@outNode/@outgoingLink.0"/>
+      </node>
+      <node name="STATUS" schemaDataType="STRING" level="2">
+        <properties key="type" value="string"/>
+        <properties key="id" value="http://wso2jsonschema.org/STATUS"/>
+        <properties key="nullable" value="false"/>
+        <outNode/>
+        <inNode incomingLink="//@operators.0/@basicContainer/@rightContainer/@rightConnectors.0/@outNode/@outgoingLink.0"/>
+      </node>
+      <node name="DATA" level="2">
+        <node name="bank_id" schemaDataType="NUMBER" level="3">
+          <properties key="type" value="number"/>
+          <properties key="id" value="http://wso2jsonschema.org/DATA/0/bank_id"/>
+          <properties key="nullable" value="false"/>
+          <outNode/>
+          <inNode incomingLink="//@input/@treeNode.0/@node.2/@node.0/@outNode/@outgoingLink.0"/>
+        </node>
+        <node name="name_eng" schemaDataType="STRING" level="3">
+          <properties key="type" value="string"/>
+          <properties key="id" value="http://wso2jsonschema.org/DATA/0/name_eng"/>
+          <properties key="nullable" value="false"/>
+          <outNode/>
+          <inNode incomingLink="//@input/@treeNode.0/@node.2/@node.1/@outNode/@outgoingLink.0"/>
+        </node>
+        <node name="name_sin" schemaDataType="STRING" level="3">
+          <properties key="type" value="string"/>
+          <properties key="id" value="http://wso2jsonschema.org/DATA/0/name_sin"/>
+          <properties key="nullable" value="false"/>
+          <outNode/>
+          <inNode/>
+        </node>
+        <node name="name_tam" schemaDataType="STRING" level="3">
+          <properties key="type" value="string"/>
+          <properties key="id" value="http://wso2jsonschema.org/DATA/0/name_tam"/>
+          <properties key="nullable" value="false"/>
+          <outNode/>
+          <inNode/>
+        </node>
+        <node name="active" schemaDataType="BOOLEAN" level="3">
+          <properties key="type" value="boolean"/>
+          <properties key="id" value="http://wso2jsonschema.org/DATA/0/active"/>
+          <properties key="nullable" value="false"/>
+          <outNode/>
+          <inNode incomingLink="//@input/@treeNode.0/@node.2/@node.4/@outNode/@outgoingLink.0"/>
+        </node>
+        <node name="create_by" schemaDataType="NUMBER" level="3">
+          <properties key="type" value="number"/>
+          <properties key="id" value="http://wso2jsonschema.org/DATA/0/create_by"/>
+          <properties key="nullable" value="false"/>
+          <outNode/>
+          <inNode/>
+        </node>
+        <node name="swift_code" schemaDataType="STRING" level="3">
+          <properties key="type" value="string"/>
+          <properties key="id" value="http://wso2jsonschema.org/DATA/0/swift_code"/>
+          <properties key="nullable" value="false"/>
+          <outNode/>
+          <inNode incomingLink="//@input/@treeNode.0/@node.2/@node.6/@outNode/@outgoingLink.0"/>
+        </node>
+        <properties key="type" value="array"/>
+        <properties key="id" value="http://wso2jsonschema.org/DATA"/>
+        <properties key="items_id" value="http://wso2jsonschema.org/DATA/0"/>
+        <properties key="items_type" value="object"/>
+        <properties key="nullable" value="false"/>
+        <properties key="properties_id" value="{bank_id={id=http://wso2jsonschema.org/DATA/0/bank_id, type=number}, name_eng={id=http://wso2jsonschema.org/DATA/0/name_eng, type=string}, name_sin={id=http://wso2jsonschema.org/DATA/0/name_sin, type=string}, name_tam={id=http://wso2jsonschema.org/DATA/0/name_tam, type=string}, active={id=http://wso2jsonschema.org/DATA/0/active, type=boolean}, create_by={id=http://wso2jsonschema.org/DATA/0/create_by, type=number}, swift_code={id=http://wso2jsonschema.org/DATA/0/swift_code, type=string}}"/>
+        <outNode/>
+        <inNode/>
+      </node>
+      <properties key="type" value="object"/>
+      <properties key="$schema" value="http://wso2.org/json-schema/wso2-data-mapper-v5.0.0/schema#"/>
+      <properties key="id" value="http://wso2jsonschema.org"/>
+      <properties key="nullable" value="false"/>
+      <outNode/>
+      <inNode/>
+    </treeNode>
+  </output>
+  <operators xsi:type="datamapper:LowerCase" defaultInputConnectors="1" defaultOutputConnectors="1" operatorType="LOWERCASE">
+    <basicContainer>
+      <leftContainer>
+        <leftConnectors>
+          <inNode incomingLink="//@input/@treeNode.0/@node.1/@outNode/@outgoingLink.0"/>
+        </leftConnectors>
+      </leftContainer>
+      <rightContainer>
+        <rightConnectors>
+          <outNode>
+            <outgoingLink inNode="//@output/@treeNode.0/@node.1/@inNode"/>
+          </outNode>
+        </rightConnectors>
+      </rightContainer>
+    </basicContainer>
+  </operators>
+</datamapper:DataMapperRoot>

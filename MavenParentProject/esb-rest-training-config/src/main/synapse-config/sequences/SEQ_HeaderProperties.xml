@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sequence name="SEQ_HeaderProperties" trace="disable" xmlns="http://ws.apache.org/ns/synapse">
+    <property description="channel" expression="$trp:channel" name="prop_channel" scope="default" type="STRING"/>
+    <property expression="base64Decode($trp:userName)" name="prop_username" scope="default" type="STRING"/>
+    <property expression="base64Decode($trp:password)" name="prop_password" scope="default" type="STRING"/>
+    <property expression="get-property('uri.var.startDate')" name="prop_startDate" scope="default" type="STRING"/>
+    <property expression="$url:code" name="codeVal" scope="default" type="STRING"/>
+    <property expression="$url:petname" name="petnameVal" scope="default" type="STRING"/>
+    <property description="message configurations loaded from message.xml" expression="get-property('registry','conf:/custom/message.xml')" name="prop_message" scope="default" type="OM"/>
+    <property expression="$ctx:prop_message/message/fail" name="prop_fail_mesg" scope="default" type="STRING"/>
+    <log description="log_channel" level="custom">
+        <property expression="get-property('prop_channel')" name="log_channel"/>
+        <property expression="get-property('prop_username')" name="log_username"/>
+        <property expression="$ctx:prop_password" name="log_password"/>
+        <property expression="$ctx:prop_startDate" name="log_startDate"/>
+        <property expression="$ctx:codeVal" name="log_code"/>
+        <property expression="$ctx:petnameVal" name="log_petname"/>
+        <property expression="$ctx:prop_message" name="log_message"/>
+        <property expression="$ctx:prop_fail_mesg" name="log_fail_message"/>
+    </log>
+</sequence>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sequence name="SEQ_Bank_Service_Get_Bank_Byid" trace="disable" xmlns="http://ws.apache.org/ns/synapse">
+    <property description="endpoints configurations loaded from endpointConfig.xml" expression="get-property('registry','conf:/custom/endpointConfig.xml')" name="prop_endpoints" scope="default" type="OM"/>
+    <property expression="$ctx:prop_endpoints/context" name="prop_context" scope="default" type="STRING"/>
+    <property expression="$ctx:prop_endpoints/bank/get_by_id" name="prop_get_bank_byid" scope="default" type="STRING"/>
+    <property expression="fn:concat($ctx:prop_context, $ctx:prop_get_bank_byid)" name="uri.var.service.url" scope="default" type="STRING"/>
+    <property expression="get-property('uri.var.bankId')" name="uri.var.service.param" scope="default" type="STRING"/>
+    <log description="log_channel" level="custom">
+        <property expression="$ctx:prop_context" name="log_context"/>
+        <property expression="$ctx:prop_get_bank_byid" name="log_get_all_bank"/>
+        <property expression="$ctx:uri.var.service.url" name="log_url"/>
+        <property expression="$ctx:uri.var.service.param" name="log_bankid"/>
+    </log>
+    <send description="call get bank byId endpoint">
+        <endpoint>
+            <http method="get" uri-template="{uri.var.service.url}/{uri.var.service.param}"/>
+        </endpoint>
+    </send>
+</sequence>

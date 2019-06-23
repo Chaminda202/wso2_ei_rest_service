@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sequence name="SEQ_Bank_Service_Create_Bank" trace="disable" xmlns="http://ws.apache.org/ns/synapse">
+    <property description="endpoints configurations loaded from endpointConfig.xml" expression="get-property('registry','conf:/custom/endpointConfig.xml')" name="prop_endpoints" scope="default" type="OM"/>
+    <property expression="$ctx:prop_endpoints/context" name="prop_context" scope="default" type="STRING"/>
+    <property expression="$ctx:prop_endpoints/bank/create" name="prop_create_bank" scope="default" type="STRING"/>
+    <property expression="fn:concat($ctx:prop_context, $ctx:prop_create_bank)" name="uri.var.service.url" scope="default" type="STRING"/>
+    <log description="log_channel" level="custom">
+        <property expression="$ctx:uri.var.service.url" name="log_url"/>
+    </log>
+    <call description="call create bank endpoint">
+        <endpoint key="EPT_Bank_Service_Create_Bank"/>
+    </call>
+</sequence>

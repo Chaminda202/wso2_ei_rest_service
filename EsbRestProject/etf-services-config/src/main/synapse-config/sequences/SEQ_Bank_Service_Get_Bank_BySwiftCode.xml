@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sequence name="SEQ_Bank_Service_Get_Bank_BySwiftCode" trace="disable" xmlns="http://ws.apache.org/ns/synapse">
+    <property description="endpoints configurations loaded from endpointConfig.xml" expression="get-property('registry','conf:/custom/endpointConfig.xml')" name="prop_endpoints" scope="default" type="OM"/>
+    <property expression="$ctx:prop_endpoints/context" name="prop_context" scope="default" type="STRING"/>
+    <property expression="$ctx:prop_endpoints/bank/get_by_swiftcode" name="prop_get_bank_byswiftcode" scope="default" type="STRING"/>
+    <property expression="fn:concat($ctx:prop_context, $ctx:prop_get_bank_byswiftcode)" name="uri.var.service.url" scope="default" type="STRING"/>
+    <log description="log_channel" level="custom">
+        <property expression="$ctx:prop_context" name="log_context"/>
+        <property expression="$ctx:prop_get_bank_byswiftcode" name="log_get_all_bank"/>
+        <property expression="$ctx:uri.var.service.url" name="log_url"/>
+    </log>
+    <call description="call get bank by swiftcode">
+        <endpoint key="EPT_Bank_Service_Get_By_Swiftcode"/>
+    </call>
+</sequence>

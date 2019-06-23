@@ -1,0 +1,6 @@
+<error>
+	<generic>Violate some rules</generic>
+	<message>
+		<success>Api call is success</success>
+	</message>
+</error>

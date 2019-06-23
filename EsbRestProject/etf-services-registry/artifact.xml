@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?><artifacts>
+    <artifact name="endpointConfig_xml" groupId="com.rest.etf-services-registry.resource" version="1.0.0" type="registry/resource" serverRole="GovernanceRegistry">
+        <item>
+            <file>endpointConfig.xml</file>
+            <path>/_system/config/custom</path>
+            <mediaType>application/vnd.wso2.esb.endpoint</mediaType>
+        </item>
+    </artifact>
+    <artifact name="message_xml" groupId="com.rest.etf-services-registry.resource" version="1.0.0" type="registry/resource" serverRole="GovernanceRegistry">
+        <item>
+            <file>message.xml</file>
+            <path>/_system/config/custom</path>
+            <mediaType>application/xml</mediaType>
+        </item>
+    </artifact>
+    <artifact name="DM_Bank_Service_Get_All" groupId="com.rest.etf-services-registry.resource" version="1.0.0" type="registry/resource" serverRole="EnterpriseServiceBus">
+        <item>
+            <file>DM_Bank_Service_Get_All.dmc</file>
+            <path>/_system/governance/datamapper</path>
+            <mediaType>text/plain</mediaType>
+        </item>
+    </artifact>
+    <artifact name="DM_Bank_Service_Get_All_inputSchema" groupId="com.rest.etf-services-registry.resource" version="1.0.0" type="registry/resource" serverRole="EnterpriseServiceBus">
+        <item>
+            <file>DM_Bank_Service_Get_All_inputSchema.json</file>
+            <path>/_system/governance/datamapper</path>
+            <mediaType>text/plain</mediaType>
+        </item>
+    </artifact>
+    <artifact name="DM_Bank_Service_Get_All_outputSchema" groupId="com.rest.etf-services-registry.resource" version="1.0.0" type="registry/resource" serverRole="EnterpriseServiceBus">
+        <item>
+            <file>DM_Bank_Service_Get_All_outputSchema.json</file>
+            <path>/_system/governance/datamapper</path>
+            <mediaType>text/plain</mediaType>
+        </item>
+    </artifact>
+</artifacts>

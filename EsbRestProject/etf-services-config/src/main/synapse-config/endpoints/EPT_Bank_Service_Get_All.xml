@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<endpoint name="EPT_Bank_Service_Get_All" xmlns="http://ws.apache.org/ns/synapse">
+    <http method="get" uri-template="{uri.var.service.url}"/>
+</endpoint>

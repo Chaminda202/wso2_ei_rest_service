@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<endpoint name="EPT_Bank_Service_Update_Bank" xmlns="http://ws.apache.org/ns/synapse">
+    <http method="put" uri-template="{uri.var.service.url}/{uri.var.bankId}"/>
+</endpoint>

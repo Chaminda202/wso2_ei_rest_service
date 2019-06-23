@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?><resources>
+    <item>
+        <file>message.xml</file>
+        <path>/_system/config/custom</path>
+        <mediaType>application/xml</mediaType>
+    </item>
+</resources>

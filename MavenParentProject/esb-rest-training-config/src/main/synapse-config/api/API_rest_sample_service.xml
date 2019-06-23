@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<api context="/sample" name="API_rest_sample_service" xmlns="http://ws.apache.org/ns/synapse">
+    <resource methods="GET" uri-template="/query?code={codeVal}&amp;petname={petnameVal}">
+        <inSequence>
+            <property expression="$url:code" name="codeVal" scope="default" type="STRING"/>
+            <log description="log_channel" level="custom">
+                <property expression="$ctx:codeVal" name="log_code"/>
+            </log>
+            <log description="Request_Log" level="full"/>
+            <sequence key="SEQ_HeaderProperties"/>
+        </inSequence>
+        <outSequence>
+            <respond/>
+        </outSequence>
+        <faultSequence/>
+    </resource>
+</api>

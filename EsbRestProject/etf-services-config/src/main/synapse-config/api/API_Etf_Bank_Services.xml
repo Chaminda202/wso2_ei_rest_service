@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<api context="/banks" name="API_Etf_Bank_Services" xmlns="http://ws.apache.org/ns/synapse">
+    <resource methods="GET" protocol="http">
+        <inSequence>
+            <log description="log_request" level="full"/>
+            <sequence key="SEQ_Bank_Service_Get_All_Bank"/>
+            <loopback/>
+        </inSequence>
+        <outSequence>
+            <log description="log_response" level="full"/>
+            <property description="Response Convert json to xml" name="messageType" scope="axis2" type="STRING" value="application/xml"/>
+            <send/>
+        </outSequence>
+        <faultSequence/>
+    </resource>
+    <resource methods="GET" protocol="http" uri-template="/mapper/all">
+        <inSequence>
+            <log description="log_request" level="full"/>
+            <sequence key="SEQ_Bank_Service_Data_Mapper_Get_All_Bank"/>
+            <loopback/>
+        </inSequence>
+        <outSequence>
+            <log description="log_response" level="full"/>
+            <send/>
+        </outSequence>
+        <faultSequence/>
+    </resource>
+    <resource methods="GET" protocol="http" uri-template="/xslt/all">
+        <inSequence>
+            <log description="log_request" level="full"/>
+            <sequence key="SEQ_Bank_Service_XSLT_Get_All_Bank"/>
+            <loopback/>
+        </inSequence>
+        <outSequence>
+            <log description="log_response" level="full"/>
+            <send/>
+        </outSequence>
+        <faultSequence/>
+    </resource>
+    <resource methods="GET" protocol="http" uri-template="/{bankId}">
+        <inSequence>
+            <log description="log_request" level="full"/>
+            <sequence key="SEQ_Bank_Service_Get_Bank_Byid"/>
+        </inSequence>
+        <outSequence>
+            <log description="log_response" level="full"/>
+            <send/>
+        </outSequence>
+        <faultSequence/>
+    </resource>
+    <resource methods="GET" protocol="http" uri-template="/swiftcode/{swiftCode}">
+        <inSequence>
+            <log description="log_request" level="full"/>
+            <sequence key="SEQ_Bank_Service_Get_Bank_BySwiftCode"/>
+            <loopback/>
+        </inSequence>
+        <outSequence>
+            <log description="log_response" level="full"/>
+            <send/>
+        </outSequence>
+        <faultSequence/>
+    </resource>
+    <resource methods="POST" protocol="http" uri-template="/create">
+        <inSequence>
+            <log description="log_request" level="full"/>
+            <sequence key="SEQ_Bank_Service_Create_Bank"/>
+            <loopback/>
+        </inSequence>
+        <outSequence>
+            <log description="log_response" level="full"/>
+            <send/>
+        </outSequence>
+        <faultSequence/>
+    </resource>
+    <resource methods="PUT" protocol="http" uri-template="/update/{bankId}">
+        <inSequence>
+            <log description="log_request" level="full"/>
+            <sequence key="SEQ_Bank_Service_Update_Bank"/>
+            <loopback/>
+        </inSequence>
+        <outSequence>
+            <log description="log_response" level="full"/>
+            <send/>
+        </outSequence>
+        <faultSequence/>
+    </resource>
+    <resource methods="DELETE" protocol="http" uri-template="/delete/{bankId}">
+        <inSequence>
+            <log description="log_request" level="full"/>
+            <sequence key="SEQ_Bank_Service_Delete_Bank"/>
+            <loopback/>
+        </inSequence>
+        <outSequence>
+            <log description="log_response" level="full"/>
+            <send/>
+        </outSequence>
+        <faultSequence/>
+    </resource>
+</api>

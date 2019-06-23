@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sequence name="SEQ_Bank_Service_Update_Bank" trace="disable" xmlns="http://ws.apache.org/ns/synapse">
+    <property description="endpoints configurations loaded from endpointConfig.xml" expression="get-property('registry','conf:/custom/endpointConfig.xml')" name="prop_endpoints" scope="default" type="OM"/>
+    <property expression="$ctx:prop_endpoints/context" name="prop_context" scope="default" type="STRING"/>
+    <property expression="$ctx:prop_endpoints/bank/update" name="prop_update_bank" scope="default" type="STRING"/>
+    <property expression="fn:concat($ctx:prop_context, $ctx:prop_update_bank)" name="uri.var.service.url" scope="default" type="STRING"/>
+    <log description="log_channel" level="custom">
+        <property expression="$ctx:uri.var.service.url" name="log_url"/>
+    </log>
+    <payloadFactory description="payload_update_bank" media-type="json">
+        <format>{ "name_eng": "$1","name_sin": "$2", "name_tam": "$3","active": $4, "swift_code": "$5"}</format>
+        <args>
+            <arg evaluator="json" expression="$.name_eng"/>
+            <arg evaluator="json" expression="$.name_sin"/>
+            <arg evaluator="json" expression="$.name_tam"/>
+            <arg evaluator="json" expression="$.active"/>
+            <arg evaluator="json" expression="$.swift_code"/>
+        </args>
+    </payloadFactory>
+    <property description="accept" name="Accept" scope="transport" type="STRING" value="application/json"/>
+    <log description="Before call the endpoint" level="full"/>
+    <call description="call update bank endpoint">
+        <endpoint key="EPT_Bank_Service_Update_Bank"/>
+    </call>
+</sequence>
