@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sequence name="SEQ_Bank_Service_Data_Service_Get_All_Bank" trace="disable" xmlns="http://ws.apache.org/ns/synapse">
+    <property description="endpoints configurations loaded from endpointConfig.xml" expression="get-property('registry','conf:/custom/endpointConfig.xml')" name="prop_endpoints" scope="default" type="OM"/>
+    <property expression="$ctx:prop_endpoints/dataservice_context" name="prop_context" scope="default" type="STRING"/>
+    <property expression="$ctx:prop_endpoints/dataservice/get_all" name="prop_all_bank" scope="default" type="STRING"/>
+    <property expression="fn:concat($ctx:prop_context, $ctx:prop_all_bank)" name="uri.var.service.url" scope="default" type="STRING"/>
+    <log description="log_channel" level="custom">
+        <property expression="$ctx:uri.var.service.url" name="log_url"/>
+    </log>
+    <payloadFactory media-type="xml">
+        <format>
+            <_postrequest_box>
+                <_get_getallbanks/>
+            </_postrequest_box>
+        </format>
+        <args/>
+    </payloadFactory>
+    <property name="messageType" scope="axis2" type="STRING" value="application/xml"/>
+    <call description="call data service to  get all banks">
+        <endpoint key="EPT_DS_Bank_Service_Get_All"/>
+    </call>
+    <payloadFactory media-type="xml">
+        <format>
+            <response>$1</response>
+        </format>
+        <args>
+            <arg evaluator="xml" expression="//*[local-name()='Bank']"/>
+        </args>
+    </payloadFactory>
+    <xslt key="LE_XSTL_DS_Bank_Service_Get_All"/>
+</sequence>

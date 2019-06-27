@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<localEntry key="LE_XSTL_DS_Bank_Service_Get_All" xmlns="http://ws.apache.org/ns/synapse">
+    <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+        <xsl:output encoding="utf-8" indent="no" method="xml" omit-xml-declaration="yes"/>
+        <xsl:template match="/">
+            <response>
+                <status>success</status>
+                <xsl:for-each select="response/Bank">
+                    <bank>
+                        <bank_id>
+                            <xsl:value-of select="id/text()"/>
+                        </bank_id>
+                        <name_eng>
+                            <xsl:value-of select="name_eng/text()"/>
+                        </name_eng>
+                        <active>
+                            <xsl:value-of select="active/text()"/>
+                        </active>
+                        <swift_code>
+                            <xsl:value-of select="swift_code/text()"/>
+                        </swift_code>
+                    </bank>
+                </xsl:for-each>
+            </response>
+        </xsl:template>
+    </xsl:stylesheet>
+</localEntry>

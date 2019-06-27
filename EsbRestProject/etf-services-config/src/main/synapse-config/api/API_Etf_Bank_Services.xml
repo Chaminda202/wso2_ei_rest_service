@@ -37,6 +37,19 @@
         </outSequence>
         <faultSequence/>
     </resource>
+    <resource methods="GET" protocol="http" uri-template="/dataservice/all">
+        <inSequence>
+            <log description="log_request" level="full"/>
+            <sequence key="SEQ_Bank_Service_Data_Service_Get_All_Bank"/>
+            <loopback/>
+        </inSequence>
+        <outSequence>
+            <log description="log_response" level="full"/>
+            <!-- <property description="Response Convert xml to json" name="messageType" scope="axis2" type="STRING" value="application/json"/> -->
+            <send/>
+        </outSequence>
+        <faultSequence/>
+    </resource>
     <resource methods="GET" protocol="http" uri-template="/{bankId}">
         <inSequence>
             <log description="log_request" level="full"/>

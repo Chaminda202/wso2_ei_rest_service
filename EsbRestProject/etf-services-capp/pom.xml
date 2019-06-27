@@ -25,13 +25,16 @@
     <com.rest.etf-services-config.endpoint_._EPT_Bank_Service_Create_Bank>capp/EnterpriseServiceBus</com.rest.etf-services-config.endpoint_._EPT_Bank_Service_Create_Bank>
     <com.rest.etf-services-config.sequence_._SEQ_Bank_Service_Delete_Bank>capp/EnterpriseServiceBus</com.rest.etf-services-config.sequence_._SEQ_Bank_Service_Delete_Bank>
     <com.rest.etf-services-registry.resource_._message_xml>capp/EnterpriseServiceBus</com.rest.etf-services-registry.resource_._message_xml>
+    <com.rest.etf-services-config.sequence_._SEQ_Bank_Service_Data_Service_Get_All_Bank>capp/EnterpriseServiceBus</com.rest.etf-services-config.sequence_._SEQ_Bank_Service_Data_Service_Get_All_Bank>
     <com.rest.etf-services-config.sequence_._SEQ_Bank_Service_Endpoint_Template_Get_Bank_BySwiftCode>capp/EnterpriseServiceBus</com.rest.etf-services-config.sequence_._SEQ_Bank_Service_Endpoint_Template_Get_Bank_BySwiftCode>
     <artifact.types>jaggery/app=zip,lib/library/bundle=jar,service/rule=aar,event/receiver=xml,synapse/message-processors=xml,synapse/endpointTemplate=xml,synapse/message-store=xml,synapse/proxy-service=xml,event/execution-plan=siddhiql,carbon/application=car,registry/resource=zip,lib/dataservice/validator=jar,synapse/endpoint=xml,web/application=war,synapse/inbound-endpoint=xml,synapse/sequence=xml,synapse/configuration=xml,synapse/task=xml,synapse/api=xml,webapp/jaxws=war,service/meta=xml,bpel/workflow=zip,synapse/lib=zip,service/dataservice=dbs,event/publisher=xml,synapse/local-entry=xml,synapse/priority-executor=xml,synapse/template=xml,synapse/event-source=xml,event/stream=json,lib/carbon/ui=jar,service/axis2=aar,synapse/sequenceTemplate=xml,wso2/gadget=dar,lib/synapse/mediator=jar</artifact.types>
     <com.rest.etf-services-config.sequence_._SEQ_Bank_Service_Get_Bank_Byid>capp/EnterpriseServiceBus</com.rest.etf-services-config.sequence_._SEQ_Bank_Service_Get_Bank_Byid>
+    <com.rest.etf-services-config.endpoint_._EPT_DS_Bank_Service_Get_All>capp/EnterpriseServiceBus</com.rest.etf-services-config.endpoint_._EPT_DS_Bank_Service_Get_All>
     <com.rest.etf-services-config.sequence_._SEQ_Bank_Service_Create_Bank>capp/EnterpriseServiceBus</com.rest.etf-services-config.sequence_._SEQ_Bank_Service_Create_Bank>
     <com.rest.etf-services-config.sequence_._SEQ_Bank_Service_Get_Bank_BySwiftCode>capp/EnterpriseServiceBus</com.rest.etf-services-config.sequence_._SEQ_Bank_Service_Get_Bank_BySwiftCode>
     <com.rest.etf-services-registry.resource_._DM_Bank_Service_Get_All_inputSchema>capp/EnterpriseServiceBus</com.rest.etf-services-registry.resource_._DM_Bank_Service_Get_All_inputSchema>
     <com.rest.etf-services-config.endpoint_._EPT_Bank_Service_Get_By_Swiftcode>capp/EnterpriseServiceBus</com.rest.etf-services-config.endpoint_._EPT_Bank_Service_Get_By_Swiftcode>
+    <com.rest.etf-services-config.local-entry_._LE_XSTL_DS_Bank_Service_Get_All>capp/EnterpriseServiceBus</com.rest.etf-services-config.local-entry_._LE_XSTL_DS_Bank_Service_Get_All>
     <com.rest.etf-services-config.endpoint_._EPT_Bank_Service_Update_Bank>capp/EnterpriseServiceBus</com.rest.etf-services-config.endpoint_._EPT_Bank_Service_Update_Bank>
   </properties>
   <dependencies>
@@ -132,6 +135,18 @@
       <type>zip</type>
     </dependency>
     <dependency>
+      <groupId>com.rest.etf-services-config.endpoint</groupId>
+      <artifactId>EPT_DS_Bank_Service_Get_All</artifactId>
+      <version>1.0.0</version>
+      <type>xml</type>
+    </dependency>
+    <dependency>
+      <groupId>com.rest.etf-services-config.local-entry</groupId>
+      <artifactId>LE_XSTL_DS_Bank_Service_Get_All</artifactId>
+      <version>1.0.0</version>
+      <type>xml</type>
+    </dependency>
+    <dependency>
       <groupId>com.rest.etf-services-registry.resource</groupId>
       <artifactId>endpointConfig_xml</artifactId>
       <version>1.0.0</version>
@@ -170,6 +185,12 @@
     <dependency>
       <groupId>com.rest.etf-services-config.sequence</groupId>
       <artifactId>SEQ_Bank_Service_Create_Bank</artifactId>
+      <version>1.0.0</version>
+      <type>xml</type>
+    </dependency>
+    <dependency>
+      <groupId>com.rest.etf-services-config.sequence</groupId>
+      <artifactId>SEQ_Bank_Service_Data_Service_Get_All_Bank</artifactId>
       <version>1.0.0</version>
       <type>xml</type>
     </dependency>

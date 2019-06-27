@@ -53,4 +53,13 @@
     <artifact name="SEQ_Bank_Service_XSLT_Get_All_Bank" groupId="com.rest.etf-services-config.sequence" version="1.0.0" type="synapse/sequence" serverRole="EnterpriseServiceBus">
         <file>src/main/synapse-config/sequences/SEQ_Bank_Service_XSLT_Get_All_Bank.xml</file>
     </artifact>
+    <artifact name="SEQ_Bank_Service_Data_Service_Get_All_Bank" groupId="com.rest.etf-services-config.sequence" version="1.0.0" type="synapse/sequence" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/sequences/SEQ_Bank_Service_Data_Service_Get_All_Bank.xml</file>
+    </artifact>
+    <artifact name="EPT_DS_Bank_Service_Get_All" groupId="com.rest.etf-services-config.endpoint" version="1.0.0" type="synapse/endpoint" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/endpoints/EPT_DS_Bank_Service_Get_All.xml</file>
+    </artifact>
+    <artifact name="LE_XSTL_DS_Bank_Service_Get_All" groupId="com.rest.etf-services-config.local-entry" version="1.0.0" type="synapse/local-entry" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/local-entries/LE_XSTL_DS_Bank_Service_Get_All.xml</file>
+    </artifact>
 </artifacts>
